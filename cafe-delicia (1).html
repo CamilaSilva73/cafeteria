@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Delicia - Café Artesanal y Repostería</title>
+  <meta name="description" content="El mejor café artesanal y repostería fresca todos los días en Café Delicia, Lima, Perú.">
+  <link rel="stylesheet" href="cafe-delicia.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;">
+      <a href="#inicio" class="navbar-brand">
+        <i data-lucide="coffee" style="width:24px;height:24px;"></i>
+        <span>Café Delicia</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="cart-btn">
+        <i data-lucide="shopping-cart" style="width:24px;height:24px;"></i>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <img src="assets/primeira_foto.webp" alt="Interior del Café Delicia">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Bienvenido a Café Delicia</h1>
+      <p>El mejor café artesanal y repostería fresca todos los días</p>
+      <a href="#productos" class="btn-primary">Ver Menú</a>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="productos" class="section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <p class="section-subtitle">
+        Descubre nuestra selección de cafés artesanales, repostería fresca y alimentos deliciosos
+        preparados con los mejores ingredientes
+      </p>
+
+      <div class="category-tabs">
+        <button class="category-tab active" onclick="filterProducts('cafe', this)">
+          <i data-lucide="coffee" style="width:16px;height:16px;"></i> Café
+        </button>
+        <button class="category-tab" onclick="filterProducts('reposteria', this)">
+          <i data-lucide="cake" style="width:16px;height:16px;"></i> Repostería
+        </button>
+        <button class="category-tab" onclick="filterProducts('comida', this)">
+          <i data-lucide="utensils-crossed" style="width:16px;height:16px;"></i> Comida
+        </button>
+      </div>
+
+      <!-- CAFÉ -->
+      <div class="products-grid" id="cat-cafe">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto cafe espresso.jpg" alt="Espresso">
+          </div>
+          <div class="product-info">
+            <h3>Espresso</h3>
+            <p class="desc">Café concentrado y aromático</p>
+            <div class="product-footer">
+              <span class="price">$3.50</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto_cappuccino.jpg" alt="Cappuccino">
+          </div>
+          <div class="product-info">
+            <h3>Cappuccino</h3>
+            <p class="desc">Espresso con leche vaporizada y espuma</p>
+            <div class="product-footer">
+              <span class="price">$4.50</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto Café Helado.jpg" alt="Café Helado">
+          </div>
+          <div class="product-info">
+            <h3>Café Helado</h3>
+            <p class="desc">Refrescante café frío con hielo</p>
+            <div class="product-footer">
+              <span class="price">$5.00</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REPOSTERÍA -->
+      <div class="products-grid hidden" id="cat-reposteria">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto Pastel de Chocolate.jpg" alt="Pastel de Chocolate">
+          </div>
+          <div class="product-info">
+            <h3>Pastel de Chocolate</h3>
+            <p class="desc">Delicioso pastel de chocolate casero</p>
+            <div class="product-footer">
+              <span class="price">$4.00</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto Croissant.jpg" alt="Croissant">
+          </div>
+          <div class="product-info">
+            <h3>Croissant</h3>
+            <p class="desc">Croissant francés recién horneado</p>
+            <div class="product-footer">
+              <span class="price">$3.00</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto muffin.jpg" alt="Muffin de Arándanos">
+          </div>
+          <div class="product-info">
+            <h3>Muffin de Arándanos</h3>
+            <p class="desc">Esponjoso muffin con arándanos frescos</p>
+            <div class="product-footer">
+              <span class="price">$3.50</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMIDA -->
+      <div class="products-grid hidden" id="cat-comida">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/foto sanduiche.jpg" alt="Sándwich de Pavo">
+          </div>
+          <div class="product-info">
+            <h3>Sándwich de Pavo</h3>
+            <p class="desc">Sándwich fresco con pavo y vegetales</p>
+            <div class="product-footer">
+              <span class="price">$6.50</span>
+              <button class="btn-add">
+                <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre Nosotros</h2>
+      <p class="section-subtitle">
+        En Café Delicia, creemos que cada taza cuenta una historia. Desde 2020, hemos estado
+        sirviendo café excepcional y creando momentos especiales para nuestra comunidad.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="heart" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Pasión por el Café</h3>
+          <p>Seleccionamos los mejores granos de café de origen sostenible</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="award" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Calidad Premium</h3>
+          <p>Productos frescos preparados diariamente con ingredientes de primera</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="users" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Ambiente Acogedor</h3>
+          <p>Un espacio cálido y confortable para disfrutar con amigos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contacto" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-subtitle">
+        Visítanos o ponte en contacto con nosotros. ¡Estamos aquí para servirte!
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i data-lucide="map-pin" style="width:24px;height:24px;"></i>
+          </div>
+          <h3>Dirección</h3>
+          <p>Pje. Nicolás de Ribera 118<br>Lima, Perú</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i data-lucide="phone" style="width:24px;height:24px;"></i>
+          </div>
+          <h3>Teléfono</h3>
+          <p>+51 943592458</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i data-lucide="mail" style="width:24px;height:24px;"></i>
+          </div>
+          <h3>Email</h3>
+          <p>info@cafedelicia.com</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i data-lucide="clock" style="width:24px;height:24px;"></i>
+          </div>
+          <h3>Horario</h3>
+          <p>Lun - Vie: 7:00 - 20:00<br>Sáb - Dom: 8:00 - 21:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand">
+          <i data-lucide="coffee" style="width:24px;height:24px;"></i>
+          <span>Café Delicia</span>
+        </div>
+        <p style="font-size:0.9rem;opacity:0.8;">
+          Tu lugar favorito para disfrutar del mejor café y repostería artesanal.
+        </p>
+      </div>
+      <div>
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#" class="social-link"><i data-lucide="facebook" style="width:20px;height:20px;"></i></a>
+          <a href="#" class="social-link"><i data-lucide="instagram" style="width:20px;height:20px;"></i></a>
+          <a href="#" class="social-link"><i data-lucide="twitter" style="width:20px;height:20px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Café Delicia. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Product filter functionality
+    function filterProducts(category, btn) {
+      // Hide all grids
+      document.getElementById('cat-cafe').classList.add('hidden');
+      document.getElementById('cat-reposteria').classList.add('hidden');
+      document.getElementById('cat-comida').classList.add('hidden');
+
+      // Show selected
+      document.getElementById('cat-' + category).classList.remove('hidden');
+
+      // Update active tab
+      document.querySelectorAll('.category-tab').forEach(tab => tab.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Re-render icons in newly visible section
+      lucide.createIcons();
+    }
+  </script>
+
+</body>
+</html>
