@@ -25,7 +25,7 @@ img {
   max-width: 100%;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== INICIO ===== */
 .navbar {
   background-color: #4a3520;
   color: #ffffff;
@@ -93,7 +93,7 @@ img {
   font-weight: 700;
 }
 
-/* ===== HERO ===== */
+/* ===== APRESENTAÇÃO ===== */
 .hero {
   position: relative;
   height: 600px;
@@ -184,7 +184,7 @@ img {
   line-height: 1.6;
 }
 
-/* ===== PRODUCTS ===== */
+/* ===== PRODUTOS ===== */
 .category-tabs {
   display: flex;
   justify-content: center;
@@ -303,7 +303,7 @@ img {
   opacity: 0.9;
 }
 
-/* ===== ABOUT ===== */
+/* ===== SOBRE NÓS ===== */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
